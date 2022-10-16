@@ -2,4 +2,4 @@
 
 A DIY bitcoin transaction builder built with React.
 
-Try the app here: https://app.netlify.com/sites/whimsical-selkie-fd3433/overview
+Try the app here: https://whimsical-selkie-fd3433.netlify.app/
