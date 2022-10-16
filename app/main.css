@@ -1,0 +1,900 @@
+.navbar-brand {
+  font-family: "Audiowide";
+}
+
+.container--narrow {
+  max-width: 732px;
+}
+
+/* Hero Page */
+
+.orangeMe {
+  color: orange;
+}
+
+.mainTitle {
+  font-size: 90px;
+}
+
+.subTitle {
+  font-size: 70px;
+}
+
+.orangeBG {
+  background-color: orange;
+}
+
+/* End Hero Page */
+
+/* Misc. */
+
+button {
+  position: relative;
+  background: transparent;
+  border: 0.5px solid orange;
+  border-radius: 5px;
+  color: orange;
+  transition: color 0.3s ease-out;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: orange;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+button:hover::before,
+button:focus::before {
+  transform: scaleX(1);
+}
+
+button:hover,
+button:focus {
+  color: white;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 3px;
+  font-size: small;
+}
+
+/* End Misc. */
+
+/* Dashboard */
+
+.dashboard {
+  min-height: 530px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 0.5px solid rgba(211, 211, 211, 0.366);
+  border-radius: 7px;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  box-shadow: 0 0 5px 0 lightgray;
+}
+
+.mainInterface {
+  min-height: 480px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.superDash {
+  display: flex;
+}
+
+.superDash .dashTitle {
+  flex: 1;
+}
+
+.superDash .dashTitle .dashMainTitle {
+  font-family: "Audiowide";
+  letter-spacing: 6px;
+  font-size: xx-large;
+}
+
+.superDash .dashTitle .dashSubTitle {
+  font-size: x-small;
+  font-style: italic;
+}
+
+.greenCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: greenyellow;
+  border-radius: 50%;
+}
+
+.superDash .dashTitle .userAdd {
+  margin-top: 30px;
+  font-size: x-small;
+}
+
+.superDash .progressContainer {
+  flex: 1;
+  position: relative;
+}
+
+.progressBarTitle {
+  position: absolute;
+  bottom: 35px;
+  right: 15px;
+  font-size: small;
+}
+
+.superDash .progressContainer .progressBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid orange;
+  padding: 2px;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  box-shadow: 0 0 5px 0 lightgray;
+}
+
+.superDash .progressContainer .progressBar .progressText {
+  position: absolute;
+  left: 10%;
+  color: white;
+  font-weight: bold;
+}
+
+.progressBar .progressFill {
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-size: 24px;
+  border-radius: 25px;
+  animation: move 0.9s linear infinite;
+}
+
+@keyframes move {
+  100% {
+    background-position: 48px 0px;
+  }
+}
+
+.a {
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+}
+
+.row1 {
+  border-top: 0.5px solid lightgray;
+  flex: 1;
+  flex-basis: 150px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 4px;
+  transition-property: box-shadow, padding-left, padding-right, border-top;
+  transition-duration: 0.5s;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+.row1 .bolts {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: x-large;
+  color: darkgray;
+}
+
+.row1:hover .bolts {
+  color: greenyellow;
+}
+
+.row1 .panelLabel {
+  color: darkgray;
+  font-size: x-small;
+}
+
+.row1::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2.5px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row1:hover::before,
+.row1:focus::before {
+  transform: scaleX(1);
+}
+
+.row1:hover {
+  box-shadow: 0 0 20px 0px rgba(255, 166, 0, 0.36);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 0.5px solid rgba(255, 166, 0, 0.442);
+}
+
+.row1 .labelSection {
+  flex: 1;
+  position: relative;
+}
+
+.row1 .labelSection .mainLabel {
+  color: darkslategray;
+  font-family: "Audiowide";
+  font-size: large;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.row1:hover .mainLabel {
+  color: orange;
+  transform: scale(1.2);
+  transform-origin: 0 0;
+}
+
+.row1 .labelSection .moreButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.row1 .descriptionSection {
+  flex: 2;
+  display: flex;
+  color: darkgray;
+}
+
+.row1 .descriptionSection .stepTitle {
+  flex: 1;
+  transition-property: all;
+  transition-duration: 0.2s;
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+}
+
+.row1 .descriptionSection .detailDescription {
+  flex: 2;
+  font-size: 11px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.row1:hover .descriptionSection {
+  color: darkslategray;
+}
+
+.row2 {
+  border-top: 0.5px solid lightgray;
+  flex: 1;
+  flex-basis: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  transition-property: box-shadow, padding-left, padding-right;
+  transition-duration: 0.5s;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+.row2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2.5px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row2:hover::before,
+.row2:focus::before {
+  transform: scaleX(1);
+}
+
+.row2:hover {
+  box-shadow: 0 0 20px 0px rgba(255, 166, 0, 0.36);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 0.5px solid rgba(255, 166, 0, 0.442);
+}
+
+.row2 .labelSection {
+  flex: 1;
+  display: flex;
+}
+
+.row2 .labelSection .mainLabel {
+  color: darkslategray;
+  flex: 1;
+  font-family: "Audiowide";
+  font-size: large;
+  letter-spacing: 2px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.row2:hover .mainLabel {
+  color: orange;
+  transform: scale(1.2);
+  transform-origin: 0 0;
+}
+
+.row2 .labelSection .subLabel {
+  flex: 2;
+  font-size: x-small;
+  font-family: "Share Tech Mono", monospace;
+  color: darkgray;
+}
+
+.row2:hover .subLabel {
+  color: darkslategray;
+}
+
+.row2 .formSection {
+  position: relative;
+  flex: 2;
+}
+
+.row2 .formSection .insert {
+  color: gray;
+  letter-spacing: 1px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.row2:hover .insert {
+  color: darkslategray;
+}
+
+.senderData-rest {
+  font-size: small;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.UTXOdata {
+  font-size: small;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.SPK {
+  display: flex;
+  font-size: small;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.compileSPK {
+  flex: 1;
+}
+
+.row-OP {
+  margin-bottom: 3px;
+}
+
+.compileSPK .hash160 {
+  width: 100%;
+}
+
+.generatedSPK {
+  flex: 1;
+  margin-left: 5px;
+}
+
+.completedSPK {
+  font-size: x-small;
+}
+
+.row2 .bolts {
+  color: darkgray;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: x-large;
+}
+
+.row2:hover .bolts {
+  color: greenyellow;
+}
+
+.row2 .panelLabel {
+  color: darkgray;
+  font-size: x-small;
+}
+
+.row2 .formSection .footer {
+  color: darkgray;
+  font-size: x-small;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.row2 .formSection .nextButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.row3 {
+  border-top: 0.5px solid lightgray;
+  flex: 1;
+  flex-basis: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  transition-property: box-shadow, padding-left, padding-right;
+  transition-duration: 0.5s;
+  position: relative;
+  border-radius: 6px;
+}
+
+.row3 .bolts {
+  color: darkgray;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: x-large;
+}
+
+.row3:hover .bolts {
+  color: greenyellow;
+}
+
+.row3 .panelLabel {
+  color: darkgray;
+  font-size: x-small;
+}
+
+.row3::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2.5px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row3:hover::before,
+.row3:focus::before {
+  transform: scaleX(1);
+}
+
+.row3:hover {
+  box-shadow: 0 0 20px 0px rgba(255, 166, 0, 0.36);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 0.5px solid rgba(255, 166, 0, 0.442);
+}
+
+.row3 .labelSection {
+  flex: 1;
+}
+
+.row3 .labelSection .mainLabel {
+  color: darkslategray;
+  font-family: "Audiowide";
+  font-size: large;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.row3:hover .mainLabel {
+  color: orange;
+  transform: scale(1.2);
+  transform-origin: 0 0;
+}
+
+.row3 .builderSection {
+  flex: 2;
+  display: flex;
+}
+
+.row3 .builderSection .TX-label-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: darkgray;
+  font-family: "Share Tech Mono", monospace;
+  font-size: large;
+}
+
+.row3:hover .TX-label-section {
+  color: darkslategray;
+}
+
+.row3 .builderSection .TX-label-section .TXIN-label {
+  flex: 1;
+}
+
+.row3 .builderSection .TX-label-section .TXOUT-label {
+  flex: 1;
+}
+
+.row3 .builderSection .TX-input-section {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.row3 .builderSection .TX-input-section .TXIN-inputs {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row3 .builderSection .TX-input-section .TXIN-inputs input {
+  width: 100%;
+  margin-right: 10px;
+  height: 30px;
+}
+
+.row3 .builderSection .TX-input-section .TXIN-inputs input:last-child {
+  margin-right: 0;
+}
+
+.row3 .builderSection .TX-input-section .TXOUT-inputs {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row3 .builderSection .TX-input-section .TXOUT-inputs input {
+  width: 100%;
+  margin-right: 10px;
+  height: 30px;
+}
+
+.row3 .builderSection .TX-input-section .TXOUT-inputs input:last-child {
+  margin-right: 0;
+}
+
+::placeholder {
+  font-size: x-small;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  position: relative;
+  z-index: 2;
+}
+
+/* End Dashboard */
+
+/* Floating Alerts */
+
+.floating-alert {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation: floatingAlert ease-in 5s forwards;
+  -o-animation: floatingAlert ease-in 5s forwards;
+  animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.floating-alerts .floating-alert:last-of-type {
+  display: block;
+}
+
+@keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@-webkit-keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+/* End Floating Alerts */
+
+/* Dots Loading Animation */
+
+.dots-loading {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dots-loading::before,
+.dots-loading::after {
+  content: " ";
+}
+
+.dots-loading div,
+.dots-loading::before,
+.dots-loading::after {
+  margin: 35px 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  opacity: 0;
+}
+
+.dots-loading::before {
+  -moz-animation: opacitychange 1s ease-in-out infinite;
+  -webkit-animation: opacitychange 1s ease-in-out infinite;
+  -o-animation: opacitychange 1s ease-in-out infinite;
+  animation: opacitychange 1s ease-in-out infinite;
+}
+
+.dots-loading div {
+  -moz-animation: opacitychange 1s ease-in-out 0.33s infinite;
+  -webkit-animation: opacitychange 1s ease-in-out 0.33s infinite;
+  -o-animation: opacitychange 1s ease-in-out 0.33s infinite;
+  animation: opacitychange 1s ease-in-out 0.33s infinite;
+  -webkit-animation-fill-mode: infinite;
+  animation-fill-mode: infinite;
+}
+
+.dots-loading::after {
+  -moz-animation: opacitychange 1s ease-in-out 0.66s infinite;
+  -webkit-animation: opacitychange 1s ease-in-out 0.66s infinite;
+  -o-animation: opacitychange 1s ease-in-out 0.66s infinite;
+  animation: opacitychange 1s ease-in-out 0.66s infinite;
+  -webkit-animation-fill-mode: infinite;
+  animation-fill-mode: infinite;
+}
+
+@keyframes opacitychange {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacitychange {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+/* End Dots Loading Animation */
+
+/* Live Validate Message */
+
+.liveValidateMessage {
+  top: -6px;
+  position: absolute;
+  z-index: 1;
+  padding-top: 6px;
+  padding-bottom: 16px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.liveValidateMessage--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.liveValidateMessage-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.liveValidateMessage-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.33s opacity ease-in-out, 0.33s transform ease-in-out;
+}
+
+.liveValidateMessage-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.liveValidateMessage-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.33s opacity ease-in-out, 0.33s transform ease-in-out;
+}
+
+/* End Live Validate Message */
+
+/* Overlay */
+.search-overlay {
+  display: flex;
+  z-index: 9000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(125, 125, 125, 0.93);
+}
+
+.search-overlay-enter {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.search-overlay-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.33s visibility ease-in-out, 0.33s opacity ease-in-out, 0.33s transform ease-in-out;
+}
+
+.search-overlay-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.search-overlay-exit-active {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: 0.33s visibility ease-in-out, 0.33s opacity ease-in-out, 0.33s transform ease-in-out;
+}
+
+.infoBox {
+  width: 60vw;
+  height: 60vh;
+  margin: auto;
+  display: flex;
+}
+
+.infoBox .leftBox {
+  color: white;
+  flex: 2;
+  text-align: right;
+  padding-top: 10vh;
+}
+
+.infoBox .leftBox h1 {
+  font-size: 2.7vw;
+}
+
+.infoBox .leftBox h3 {
+  color: rgb(214, 214, 214);
+  font-size: 2vw;
+}
+
+.infoBox .leftBox .lead {
+  font-size: 0.9vw;
+}
+
+.closePreviewButton {
+  position: relative;
+  text-decoration: none;
+  font-size: x-large;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 15px;
+  padding: 4px 12px;
+  overflow: hidden;
+  z-index: 2;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+}
+
+.closePreviewButton:hover,
+.closePreviewButton:focus {
+  color: gray;
+  cursor: pointer;
+}
+
+.closePreviewButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.closePreviewButton:hover::before,
+.closePreviewButton:focus::before {
+  transform: scaleX(1);
+}
+
+.infoBox .rightBox {
+  flex: 1;
+  display: flex;
+}
+
+.infoBox .rightBox img {
+  margin: auto;
+  width: 20vw;
+  transform: scale(1.5);
+  transform-origin: left;
+}
+
+.stepsOrder {
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+  font-family: "Audiowide";
+  font-size: 4vw;
+}
+
+/* End Overlay */
